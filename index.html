@@ -1259,6 +1259,48 @@ button:active {
     }
 
 }
+/* Эффекты для мобильной версии */
+@media (max-width: 700px) {
+
+    /* 1. Свечение иконок при нажатии */
+    .emoji {
+        display: inline-block;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .emoji:active {
+        transform: scale(1.3);
+        filter: drop-shadow(0 0 9px rgba(105, 170, 70, 0.8));
+    }
+
+    /* 2. Карточки слегка пружинят при нажатии */
+    .step:active,
+    .participation-card:active,
+    .material-card:active,
+    .card:active {
+        transform: scale(0.97);
+        box-shadow: 0 5px 18px rgba(70, 120, 50, 0.2);
+        transition: 0.2s ease;
+    }
+
+    /* 3. Анимация листочка в прогрессе */
+    .progress-leaf {
+        display: inline-block;
+        animation: progress-bounce 0.7s ease;
+    }
+
+    @keyframes progress-bounce {
+        0% {
+            transform: scale(0.5) rotate(-30deg);
+        }
+        60% {
+            transform: scale(1.3) rotate(20deg);
+        }
+        100% {
+            transform: scale(1) rotate(0deg);
+        }
+    }
+}
 </style></head><body>
 <header><div class="logo">♻ ЭКОПОКОЛЕНИЕ</div><nav><a href="#why">Зачем?</a><a href="#sort">Что сдавать</a><a href="#event">Акция</a><a href="#challenge">Челлендж</a></nav></header>
 <section class="hero"><div><span class="tag">Маленький шаг — большой вклад</span><h1>Сдай вторсырьё.<br>Помоги природе!</h1><p>Раздельный сбор — не сложно. Начни с того, что уже есть дома, и присоединяйся к экологическому движению.</p><a class="btn" href="#event">Присоединиться ↓</a></div><div class="art"><div class="hero-icons">
