@@ -253,15 +253,20 @@
 #why .cards-image {
     order: 2;
     width: 100%;
+    height: auto;
+    max-height: none;
     margin-top: 20px;
+    overflow: visible;
 }
+
 #why .cards-image img {
+    display: block;
     width: 100%;
     height: auto;
+    max-height: none;
     aspect-ratio: auto;
     object-fit: contain;
     object-position: center;
-    display: block;
     border: 3px solid #b9d99b;
     border-radius: 20px;
     box-sizing: border-box;
