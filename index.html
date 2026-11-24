@@ -240,6 +240,31 @@
     #why .cards-with-image .cards {
         grid-template-columns: 1fr;
     }
+    /* Мобильное расположение блока "Почему это важно?" */
+#why .cards-with-image {
+    display: flex;
+    flex-direction: column;
+}
+
+#why .cards {
+    order: 1;
+}
+
+#why .cards-image {
+    order: 2;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#why .cards-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border: 3px solid #b9d99b;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
 }
 /* Карточка бумаги и картона */
 .paper-card {
