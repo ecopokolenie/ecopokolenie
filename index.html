@@ -1,0 +1,1655 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Экопоколение</title><style>
+:root{--g:#174c2b;--l:#b9e56b;--m:#e8f1df;--c:#f6f4ed;--i:#171717}*{box-sizing:border-box}body{margin:0;background:var(--c);color:var(--i);font:16px/1.55 Arial}header{padding:18px 6%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px;position:sticky;top:0;background:#f6f4edee;border-bottom:1px solid #ddd;z-index:2}.logo{font-weight:900;letter-spacing:.1em;color:var(--g)}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--i);text-decoration:none;font-weight:bold}.hero,.event{padding:55px 6%;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}h1{font-size:clamp(2.8rem,6vw,5.5rem);line-height:.98;color:var(--g);margin:20px 0}h2{color:var(--g)}.tag{display:inline-block;background:var(--l);padding:7px 14px;border-radius:30px;font-weight:bold}.art{background:var(--m);border:2px solid var(--g);border-radius:28px;padding:28px;text-align:center}.art .emoji{font-size:7rem}.sticker{display:inline-block;background:white;border:2px solid;padding:12px;border-radius:12px;font-weight:900;transform:rotate(-3deg)}.btn{display:inline-block;background:var(--g);color:white;padding:13px 20px;border-radius:30px;text-decoration:none;font-weight:bold;border:0;cursor:pointer}.section{padding:40px 6%;background:white}.section:nth-of-type(even){background:var(--c)}.cards, .guide {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 950px;
+    width: calc(100% - 40px);
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+
+.card {
+    border: 2px solid var(--g);
+    border-radius: 20px;
+    padding: 20px;
+    background: var(--c);
+    min-width: 0;
+    box-sizing: border-box;
+}.guide{grid-template-columns:repeat(2,1fr)}.guide .card:nth-child(2){background:#f4c9df}.guide .card:nth-child(3){background:#d5e7f3}.guide .card:nth-child(4){background:var(--m)}.emoji{font-size:2.5rem}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:var(--m);padding:18px;border-radius:18px}.eventbox{background:var(--g);color:white;border-radius:24px;padding:25px}.eventbox h2{color:var(--l)}.eventbox .btn{background:var(--l);color:var(--g)}.challenge{display:flex;gap:10px;flex-wrap:wrap}.challenge button{padding:12px;border:2px solid var(--g);background:white;border-radius:14px;cursor:pointer;font-weight:bold}.challenge button.done{background:var(--l)}form{display:grid;gap:12px;max-width:550px}input,select{padding:13px;border-radius:12px;border:1px solid #888;font:inherit}footer{padding:30px 6%;background:var(--g);color:white}footer h2{color:var(--l)}.small{font-size:.85rem;opacity:.8}@media(max-width:780px){.hero,.event{grid-template-columns:1fr}.cards,.steps,.guide{grid-template-columns:1fr 1fr}}@media(max-width:500px){.cards,.steps,.guide{grid-template-columns:1fr}header{position:static}}
+.why-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    margin-bottom: 35px;
+}
+
+.why-text {
+    flex: 1;
+}
+
+.why-text h2 {
+    margin-top: 0;
+}
+
+.why-text p {
+    line-height: 1.7;
+}
+
+.why-intro .meme-image {
+    width: 280px;
+    max-width: 35%;
+    max-height: 220px;
+    height: auto;
+    object-fit: contain;
+    margin-right: 55px;
+    flex-shrink: 0;
+    border: 2px solid #333;
+    border-radius: 18px;
+    box-shadow: 5px 5px 0 #b7d96b;
+}
+
+@media (max-width: 700px) {
+    .why-intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .why-intro .meme-image {
+        max-width: 100%;
+        width: 280px;
+        margin: 0 auto;
+    }
+}
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    max-height: 280px;
+    height: auto;
+    object-fit: contain;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+.eco-story {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #f1f6e9;
+    border-radius: 25px;
+}
+
+.eco-story-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.eco-story-image {
+    flex: 0 0 40%;
+}
+
+.eco-story-image {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eco-story-image img {
+    display: block;
+    width: 220px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 20px;
+    border: 2px solid #333;
+    box-shadow: 5px 5px 0 #b7d96b;
+}
+
+.eco-story-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #344b37;
+}
+
+.eco-story-slogan {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #426b37;
+    letter-spacing: 0.5px;
+}
+
+/* Адаптация для телефона */
+
+@media (max-width: 700px) {
+    .eco-story-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .eco-story-image {
+        width: 100%;
+    }
+
+    .eco-story-image img {
+        height: auto;
+        max-height: 280px;
+        object-fit: contain;
+    }
+
+    .eco-story-text {
+        font-size: 16px;
+    }
+
+    .eco-story-slogan {
+        font-size: 21px;
+    }
+
+    .eco-story {
+        padding: 20px;
+    }
+}
+#why {
+    background: #ffffff;
+    border-radius: 25px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+/* Карточки внизу раздела */
+#why .features,
+#why .benefits {
+    max-width: 100%;
+    margin: 30px auto 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+/* Чтобы карточки не растягивались на весь экран */
+#why .features > *,
+#why .benefits > * {
+    min-width: 0;
+    box-sizing: border-box;
+}
+/* Общий блок: картинка слева, карточки справа */
+#why .cards-with-image {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+    max-width: 1100px;
+    width: calc(100% - 40px);
+    margin: 30px auto;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+/* Картинка слева */
+#why .cards-image {
+    width: 100%;
+    min-width: 0;
+    min-height: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#why .cards-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+/* Три карточки справа */
+#why .cards-with-image .cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Версия для телефонов */
+@media (max-width: 700px) {
+    #why .cards-with-image {
+        grid-template-columns: 1fr;
+    }
+
+    #why .cards-image {
+        height: 230px;
+    }
+
+    #why .cards-with-image .cards {
+        grid-template-columns: 1fr;
+    }
+}
+/* Карточка бумаги и картона */
+.paper-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+.paper-card-image {
+    width: 150px;
+    height: 165px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 12px;
+}
+
+.paper-card-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.paper-card-text h3 {
+    margin-top: 0;
+}
+
+.paper-card-text p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 500px) {
+    .paper-card-image {
+        width: 85px;
+        height: 110px;
+    }
+}
+/* Карточка батареек и электроники */
+.battery-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    text-align: left;
+}
+
+.battery-card-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.battery-card-text h3 {
+    margin-top: 0;
+}
+
+.battery-card-text p {
+    margin-bottom: 0;
+}
+
+.battery-card-image {
+    width: 150px;
+    height: 165px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 12px;
+}
+
+@media (max-width: 500px) {
+    .battery-card-image {
+        width: 85px;
+        height: 110px;
+    }
+}
+/* Расположение пяти шагов и картинки */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 30px auto;
+    align-items: stretch;
+}
+
+/* Карточки шагов */
+.steps .step {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Картинка справа во втором ряду */
+.steps-image {
+    grid-column: 3;
+    grid-row: 2;
+    min-width: 0;
+    min-height: 180px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.steps-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Адаптация для телефона */
+@media (max-width: 700px) {
+    .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .steps-image {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .steps {
+        grid-template-columns: 1fr;
+    }
+}
+/* Блок-напоминание под пятью шагами */
+.sorting-reminder {
+    display: grid;
+    grid-template-columns: 0.85fr 1.5fr;
+    align-items: center;
+    gap: 30px;
+    max-width: 1100px;
+    width: calc(100% - 40px);
+    margin: 45px auto;
+    padding: 25px;
+    background: #e8f1df;
+    border: 2px solid #b9e56b;
+    border-radius: 24px;
+    box-sizing: border-box;
+}
+
+/* Картинка слева */
+.reminder-image {
+    height: 300px;
+    width: 100%;
+    max-width: 260px;
+    overflow: hidden;
+    border-radius: 18px;
+    margin: 0 auto;
+}
+.reminder-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 18px;
+}
+.reminder-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Текст справа */
+.reminder-text {
+    text-align: left;
+}
+
+.reminder-label {
+    display: inline-block;
+    color: #174c2b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.reminder-text h2 {
+    color: #174c2b;
+    font-size: 32px;
+    margin: 0 0 12px;
+}
+
+.reminder-text p {
+    color: #23452d;
+    font-size: 21px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Версия для телефона */
+@media (max-width: 600px) {
+    .sorting-reminder {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 18px;
+    }
+
+    .reminder-image {
+        height: 190px;
+    }
+
+    .reminder-text p {
+        font-size: 18px;
+    }
+}
+/* Блок «Как принять участие?» */
+.participation-section {
+    max-width: 1100px;
+    width: calc(100% - 40px);
+    margin: 60px auto;
+}
+
+.participation-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.participation-label {
+    color: #56833d;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.participation-heading h2 {
+    color: #174c2b;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.participation-heading p {
+    color: #526b56;
+    font-size: 16px;
+    margin: 0;
+}
+
+.participation-cards {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.participation-card {
+    grid-column: span 2;
+    background: #f0f5e9;
+    border: 1px solid #d6e5c8;
+    border-radius: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+    min-height: 210px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Две последние карточки по центру второго ряда */
+.participation-card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.participation-card:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.participation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(40, 80, 40, 0.12);
+}
+
+.participation-number {
+    display: inline-block;
+    color: #6b963f;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.participation-card h3 {
+    color: #174c2b;
+    font-size: 19px;
+    margin: 0 0 12px;
+}
+
+.participation-card p {
+    color: #526b56;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Адаптация для планшетов и телефонов */
+@media (max-width: 700px) {
+    .participation-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .participation-card,
+    .participation-card:nth-child(4),
+    .participation-card:nth-child(5) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .participation-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .participation-card,
+    .participation-card:nth-child(4),
+    .participation-card:nth-child(5) {
+        grid-column: 1;
+    }
+}
+/* Блок о маленьких экологических привычках */
+.small-habits-section {
+    max-width: 1100px;
+    width: calc(100% - 40px);
+    margin: 55px auto;
+}
+
+/* Картинка слева и текст справа */
+.small-habits-content {
+    display: grid;
+    grid-template-columns: 0.85fr 1.4fr;
+    align-items: center;
+    gap: 35px;
+    padding: 25px;
+    background: #f0f5e9;
+    border: 1px solid #d6e5c8;
+    border-radius: 24px;
+    box-sizing: border-box;
+}
+
+.small-habits-image {
+    height: 320px;
+    width: 100%;
+    max-width: 280px;
+    overflow: hidden;
+    border-radius: 18px;
+    justify-self: center;
+}
+
+.small-habits-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.small-habits-label {
+    color: #6b963f;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.small-habits-text h2 {
+    color: #174c2b;
+    font-size: 27px;
+    line-height: 1.3;
+    margin: 12px 0;
+}
+
+.small-habits-text p {
+    color: #526b56;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Выделенная надпись внизу */
+.small-habits-quote {
+    margin-top: 18px;
+    padding: 23px;
+    background: #b9e56b;
+    color: #174c2b;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+/* Адаптация для телефона */
+@media (max-width: 600px) {
+    .small-habits-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 18px;
+    }
+
+    .small-habits-image {
+    height: 280px;
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+    .small-habits-text h2 {
+        font-size: 23px;
+    }
+
+    .small-habits-quote {
+        font-size: 18px;
+        padding: 18px;
+    }
+}
+/* Блок об экологической ответственности */
+.eco-responsibility {
+    max-width: 1100px;
+    width: calc(100% - 40px);
+    margin: 60px auto;
+}
+
+/* Основная часть: текст слева, фотография справа */
+.eco-responsibility-content {
+    display: grid;
+    grid-template-columns: 1.4fr 0.85fr;
+    align-items: center;
+    gap: 35px;
+    padding: 30px;
+    background: #f0f5e9;
+    border: 1px solid #d6e5c8;
+    border-radius: 24px;
+    box-sizing: border-box;
+}
+
+.eco-responsibility-text {
+    text-align: left;
+}
+
+.eco-responsibility-label {
+    color: #6b963f;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.eco-responsibility-text h2 {
+    color: #174c2b;
+    font-size: 27px;
+    line-height: 1.35;
+    margin: 12px 0 18px;
+}
+
+.eco-responsibility-text p {
+    color: #526b56;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 12px;
+}
+
+/* Вертикальная фотография справа */
+.eco-responsibility-image {
+    width: 100%;
+    max-width: 280px;
+    height: 320px;
+    justify-self: center;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.eco-responsibility-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Нижняя мотивирующая надпись */
+.eco-responsibility-bottom {
+    margin-top: 18px;
+    padding: 25px 30px;
+    background: #b9e56b;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.eco-responsibility-bottom h3 {
+    color: #174c2b;
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.eco-responsibility-bottom p {
+    color: #23452d;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Адаптация для телефона */
+@media (max-width: 600px) {
+    .eco-responsibility-content {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 20px;
+    }
+
+    .eco-responsibility-image {
+        height: 280px;
+        max-width: 240px;
+    }
+
+    .eco-responsibility-text h2 {
+        font-size: 23px;
+    }
+
+    .eco-responsibility-bottom {
+        padding: 22px 18px;
+    }
+
+    .eco-responsibility-bottom h3 {
+        font-size: 21px;
+    }
+
+    .eco-responsibility-bottom p {
+        font-size: 15px;
+    }
+}
+/* Блок «Присоединяйся» */
+.join-section {
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+.join-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+    align-items: center;
+    margin-top: 25px;
+}
+
+/* Левая часть с анкетой */
+.join-form {
+    background: #f0f5e9;
+    border: 1px solid #d6e5c8;
+    border-radius: 22px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.join-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.join-form input,
+.join-form select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #cbdcbd;
+    border-radius: 12px;
+    background: white;
+    color: #23452d;
+    font-size: 15px;
+}
+
+.join-form .btn {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Правая часть с фотографией */
+.join-image {
+    width: 100%;
+    max-width: 750px;
+    height: 260px;
+    justify-self: center;
+    overflow: hidden;
+    border-radius: 22px;
+    transform: translate(45px, -10px);
+    position: relative;
+    z-index: 2;
+}
+
+.join-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+/* Версия для телефона */
+@media (max-width: 650px) {
+    .join-content {
+        grid-template-columns: 1fr;
+    }
+
+    .join-image {
+    height: 220px;
+    max-width: 100%;
+    transform: none;
+}
+}
+@media (min-width: 651px) {
+    .join-image {
+        position: relative;
+        left: 55px;
+    }
+}
+/* Плавные анимации карточек */
+.step,
+.participation-card,
+.join-form {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.step:hover,
+.participation-card:hover,
+.join-form:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(40, 80, 40, 0.13);
+    border-color: #b9e56b;
+}
+
+
+
+/* Анимация кнопок */
+button,
+.btn {
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(40, 80, 40, 0.18);
+}
+
+/* Подсветка полей анкеты */
+.join-form input,
+.join-form select {
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.join-form input:focus,
+.join-form select:focus {
+    outline: none;
+    border-color: #8dbb50;
+    box-shadow: 0 0 0 3px rgba(185, 229, 107, 0.25);
+}
+
+/* Плавное появление блоков */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease,
+                transform 0.8s ease;
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Если пользователь предпочитает меньше анимаций */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+/* Общая анимация всех карточек сайта */
+.step,
+.participation-card,
+.join-form,
+.why-card,
+.material-card,
+.card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.step:hover,
+.participation-card:hover,
+.join-form:hover,
+.why-card:hover,
+.material-card:hover,
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(40, 80, 40, 0.13);
+}
+/* Последовательное появление карточек */
+.stagger-item {
+    opacity: 0;
+    translate: 0 20px;
+    transition:
+        opacity 0.65s ease var(--stagger-delay, 0ms),
+        translate 0.65s ease var(--stagger-delay, 0ms);
+}
+
+.stagger-item.stagger-visible {
+    opacity: 1;
+    translate: 0 0;
+}
+/* Анимация пунктов меню */
+nav a {
+    position: relative;
+    text-decoration: none;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #8dbb50;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+/* Полоска прогресса прокрутки */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: #8dbb50;
+    z-index: 9999;
+    transition: width 0.08s linear;
+    pointer-events: none;
+}
+/* Декоративные покачивающиеся листочки */
+.eco-leaf {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 0.8em;
+    transform-origin: bottom center;
+    animation: leaf-sway 3s ease-in-out infinite;
+}
+
+@keyframes leaf-sway {
+    0%, 100% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(12deg);
+    }
+}
+/* Летающие листочки */
+.eco-floating-leaves {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.floating-leaf {
+    position: absolute;
+    top: -60px;
+    color: #78a85b;
+    opacity: 0;
+    animation: leaf-fall linear infinite;
+    filter: drop-shadow(0 2px 4px rgba(60, 100, 40, 0.12));
+}
+
+@keyframes leaf-fall {
+    0% {
+        transform: translate3d(0, -30px, 0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.55;
+    }
+    50% {
+        transform: translate3d(45px, 50vh, 0) rotate(180deg);
+    }
+    90% {
+        opacity: 0.45;
+    }
+    100% {
+        transform: translate3d(-35px, 110vh, 0) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* Мягкие кнопки */
+.btn,
+button {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.btn:hover,
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 22px rgba(73, 116, 51, 0.22);
+}
+
+.btn:active,
+button:active {
+    transform: translateY(-1px) scale(0.97);
+    box-shadow: 0 3px 9px rgba(73, 116, 51, 0.15);
+}
+/* Красивое завершение сайта */
+.eco-footer {
+    margin-top: 90px;
+    padding: 55px 20px 25px;
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        #e7f0dc,
+        #dcebcf,
+        #edf4e5
+    );
+    border-radius: 35px 35px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.eco-footer h2 {
+    color: #355b36;
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.footer-leaves {
+    font-size: 27px;
+    letter-spacing: 10px;
+    animation: footer-leaves-float 4s ease-in-out infinite;
+}
+
+.footer-main {
+    color: #496b43;
+    font-size: 17px;
+    margin: 15px 0;
+}
+
+.footer-small {
+    color: #71905e;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.footer-line {
+    width: 75px;
+    height: 2px;
+    background: #9bbd7b;
+    margin: 28px auto 20px;
+    border-radius: 10px;
+}
+
+.footer-copy {
+    color: #71866a;
+    font-size: 12px;
+}
+
+@keyframes footer-leaves-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-7px);
+    }
+}
+/* Выполненные задания эко-челленджа */
+#tasks button.completed {
+    background: #d9edc8;
+    border: 1px solid #8dbb50;
+    color: #315b35;
+    box-shadow: 0 4px 12px rgba(90, 140, 60, 0.15);
+}
+/* Блок о начале экологических изменений */
+.action-intro {
+    max-width: 1100px;
+    margin: 65px auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    background: #f0f5e9;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.action-intro-text h2 {
+    color: #355b36;
+    font-size: 27px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.action-intro-text p {
+    color: #587052;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.action-intro-image {
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 20px;
+    justify-self: end;
+}
+
+.action-intro-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Мобильная версия */
+@media (max-width: 650px) {
+    .action-intro {
+        grid-template-columns: 1fr;
+        padding: 22px;
+        gap: 20px;
+    }
+
+    .action-intro-text h2 {
+        font-size: 23px;
+    }
+    .action-intro-image {
+    width: 75%;
+    justify-self: center;
+}
+
+}
+</style></head><body>
+<header><div class="logo">♻ ЭКОПОКОЛЕНИЕ</div><nav><a href="#why">Зачем?</a><a href="#sort">Что сдавать</a><a href="#event">Акция</a><a href="#challenge">Челлендж</a></nav></header>
+<section class="hero"><div><span class="tag">Маленький шаг — большой вклад</span><h1>Сдай вторсырьё.<br>Помоги природе!</h1><p>Раздельный сбор — не сложно. Начни с того, что уже есть дома, и присоединяйся к экологическому движению.</p><a class="btn" href="#event">Присоединиться ↓</a></div><div class="art"><div class="hero-icons">
+    <img src="инопланет.jpg"
+         alt="Экологическая иллюстрация"
+         class="hero-image">
+</div><div class="sticker">ТВОЙ ВЫБОР = БУДУЩЕЕ ПЛАНЕТЫ</div><p><b>Сортируй сегодня — создавай чистое будущее!</b></p></div>
+</section>
+<section class="eco-story">
+
+    <div class="eco-story-content">
+
+        <div class="eco-story-image">
+            <img src="ойой.jpg" alt="Экологическая иллюстрация">
+        </div>
+
+        <div class="eco-story-text">
+            <p>
+                Каждый день мы используем десятки вещей,
+                покупаем напитки в пластиковых бутылках,
+                получаем товары в картонных коробках,
+                пользуемся бумажной упаковкой.
+                Но задумываемся ли мы, что происходит
+                со всем этим после использования?
+            </p>
+        </div>
+
+    </div>
+
+    <div class="eco-story-slogan">
+        Сортируй сегодня — создавай чистое будущее!
+    </div>
+
+</section>
+<!-- Раздел Почему это важно -->
+<section class="section" id="why">
+
+    <div class="why-intro">
+
+        <div class="why-text">
+            <h2>Почему это важно?</h2>
+
+            <p>
+                Многие отходы могут стать сырьём
+                для новых вещей, если правильно
+                собирать и передавать на обработку.
+            </p>
+        </div>
+
+        <img src="не смешно.jpg"
+             alt="Экологический мем"
+             class="meme-image">
+
+    </div>
+
+
+    <!-- Картинка слева и три карточки справа -->
+    <div class="cards-with-image">
+
+        <div class="cards-image">
+            <img src="нагтев.jpg"
+                 alt="Экологическая иллюстрация">
+        </div>
+
+        <div class="cards">
+
+            <article class="card">
+                <div class="emoji">🗑️ </div>
+                <h3>Меньше отходов</h3>
+                <p>
+                    Сокращаем количество мусора,
+                    отправляемого на полигоны.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="emoji">🌿 </div>
+                <h3>Сохраняем ресурсы</h3>
+                <p>
+                    Материалы получают шанс
+                    на повторное использование.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="emoji">🏙️ </div>
+                <h3>Чище вокруг</h3>
+                <p>
+                    Ответственное обращение с отходами
+                    помогает заботиться о городе.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="section" id="sort"><h2>
+    Что можно сдавать?
+    <span class="eco-leaf">🍃 </span>
+</h2><div class="guide"><article class="card paper-card">
+
+    <img src="хайп.jpg"
+         alt="Бумага и картон"
+         class="paper-card-image">
+
+    <div class="paper-card-text">
+        <h3>Бумага и картон</h3>
+        <p>
+            Газеты, журналы, офисная бумага и коробки.
+            Сложи коробки и убери лишние элементы.
+        </p>
+    </div>
+</article><article class="card"><div class="emoji">🧴</div><h3>Пластик</h3><p>Бутылки и упаковка, которую принимает выбранный пункт. Опустоши тару.</p></article><article class="card"><div class="emoji">🥫</div><h3>Стекло и металл</h3><p>Банки, бутылки и металлическая упаковка — сдавай отдельно, если принимаются.</p></article><article class="card battery-card">
+
+    <div class="battery-card-text">
+        <h3>Батарейки и электроника</h3>
+        <p>
+            Только специальные пункты сбора.
+            Не выбрасывай в обычный контейнер.
+        </p>
+    </div>
+
+    <img src="айай.jpg"
+         alt="Батарейки и электронные отходы"
+         class="battery-card-image">
+
+</article></article></div><p class="small">Список принимаемых материалов и требования зависят от пункта сбора.</p></section>
+<section class="section">
+    <h2>5 шагов к сортировке</h2>
+
+    <div class="steps">
+        <div class="step">
+            <h3>Отделяй вторсырье от обычного мусора</h3>
+            <p>Начни с бумаги, картона и пластиковой упаковки</p>
+        </div>
+
+        <div class="step">
+            <h3>Проверяй маркировку и правила приема</h3>
+            <p>Не каждый вид пластика или упаковки принимается повсеместно</p>
+        </div>
+
+        <div class="step">
+            <h3>Убирай остатки пищи и жидкости</h3>
+            <p>Загрязненные материалы могут испортить другие отходы</p>
+        </div>
+
+        <div class="step">
+            <h3>Подготавливай вторсырье</h3>
+            <p>Например, складывай картонные коробки, а пластиковую тару опустошай</p>
+        </div>
+
+        <div class="step">
+            <h3>Сдавай материалы в подходящие пункты</h3>
+            <p>Батарейки и электронику относите только в специальные места сбора</p>
+        </div>
+
+        <div class="steps-image">
+            <img src="привет.jpg" alt="Сортировка отходов">
+        </div>
+    </div>
+</section>
+<!-- Важное напоминание -->
+<section class="sorting-reminder">
+    <div class="reminder-image">
+        <img src="мя.jpg" alt="Забота об окружающей среде">
+    </div>
+
+    <div class="reminder-text">
+        <h2>Помни!</h2>
+        <p>
+            Сортировать нужно не ради галочки,
+            а ради того, чтобы отходы могли
+            получить вторую жизнь.
+        </p>
+    </div>
+</section>
+<section class="action-intro">
+    <div class="action-intro-text">
+        <h2>Изменения начинаются с людей, которые готовы действовать</h2>
+
+        <p>
+            Ты можешь внести свой вклад, даже если никогда
+            не сортировал отходы. Каждый небольшой шаг —
+            это возможность сделать окружающий мир чище.
+            Главное — начать!
+        </p>
+    </div>
+
+    <div class="action-intro-image">
+        <img src="не делаю.jpg" alt="Забота об окружающей среде">
+    </div>
+</section>
+<!-- Как принять участие -->
+<section class="participation-section">
+    <div class="participation-heading">
+        <span class="participation-label">ТВОЙ ВКЛАД В ЭКОЛОГИЮ</span>
+        <h2>
+    Как принять участие?
+    <span class="eco-leaf">🍃 </span>
+</h2>
+        <p>Начни с небольших шагов — каждый из них имеет значение!</p>
+    </div>
+
+    <div class="participation-cards">
+
+        <div class="participation-card">
+            <span class="participation-number">01</span>
+            <h3>Собери вторсырьё</h3>
+            <p>Собери бумагу, картон и другие материалы, которые принимаются на переработку.</p>
+        </div>
+
+        <div class="participation-card">
+            <span class="participation-number">02</span>
+            <h3>Найди пункт сбора</h3>
+            <p>Узнай, где находится ближайший пункт приёма вторсырья, и выбери удобное место.</p>
+        </div>
+
+        <div class="participation-card">
+            <span class="participation-number">03</span>
+            <h3>Присоединись к акции</h3>
+            <p>Стань участником экологической акции в своём учебном заведении или районе.</p>
+        </div>
+
+        <div class="participation-card">
+            <span class="participation-number">04</span>
+            <h3>Поделись с близкими</h3>
+            <p>Расскажи друзьям и семье о раздельном сборе отходов и вдохнови их присоединиться.</p>
+        </div>
+
+        <div class="participation-card">
+            <span class="participation-number">05</span>
+            <h3>Распространяй информацию</h3>
+            <p>Поделись полезными экологическими советами и информацией в социальных сетях.</p>
+        </div>
+
+    </div>
+</section>
+<!-- Небольшие шаги — большие перемены -->
+<section class="small-habits-section">
+
+    <div class="small-habits-content">
+
+        <div class="small-habits-image">
+            <img src="йоу.jpg" alt="Экологичные привычки">
+        </div>
+
+        <div class="small-habits-text">
+            <span class="small-habits-label">НАЧНИ С МАЛОГО</span>
+            <h2>Не обязательно сразу менять все привычки</h2>
+            <p>
+                Начни с одного вида вторсырья, затем постепенно
+                расширяй сортировку. Маленькие шаги помогут
+                сделать заботу об окружающей среде частью
+                повседневной жизни.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="small-habits-quote">
+        Твоя маленькая привычка может вдохновить других!
+    </div>
+
+</section>
+<!-- Экологическая ответственность каждого -->
+<section class="eco-responsibility">
+
+    <div class="eco-responsibility-content">
+
+        <div class="eco-responsibility-text">
+            <span class="eco-responsibility-label">НАШ ОБЩИЙ ВКЛАД</span>
+
+            <h2>Чистая окружающая среда начинается с каждого из нас</h2>
+
+            <p>
+                Окружающая среда зависит не только от работы предприятий
+                и организаций, но и от повседневных решений каждого из нас.
+            </p>
+
+            <p>
+                Раздельный сбор помогает ответственнее относиться
+                к потреблению, сокращать количество смешанных отходов
+                и поддерживать повторное использование материалов.
+            </p>
+        </div>
+
+        <div class="eco-responsibility-image">
+            <img src="ааа.jpg" alt="Чистый и зелёный город">
+        </div>
+
+    </div>
+
+    <div class="eco-responsibility-bottom">
+        <h3>Не оставайся в стороне!</h3>
+
+        <p>
+            Сортируй, сдавай вторсырьё и вдохновляй окружающих
+            своим примером. Вместе мы сможем сделать наш город чище!
+        </p>
+    </div>
+
+</section>
+<section class="event" id="event"><div><span class="tag">Присоединяйся!</span><h2>Стань частью экологической акции</h2><p>Собери вторсырьё, пригласи друзей и внеси вклад в более чистое будущее.</p><ul><li>Собери материалы дома.</li><li>Узнай, где их принимают.</li><li>Присоединяйся к сбору.</li><li>Расскажи о проекте.</li></ul></div><div class="eventbox"><h2>Сдай вторсырьё — помоги природе!</h2><p><b>Дата:</b> 01.12.2026</p><p><b>Организаторы:</b> студенты 1 курса ММУ, группа ЮГП631-9</p><p><b>Место:</b> уточняется</p><a class="btn" href="#join">Я участвую!</a></div></section> 
+<section class="section" id="challenge"><h2>Эко-челлендж: 5 действий</h2><p>Отмечай задания и смотри, как растёт твой вклад. Прогресс не сохраняется после закрытия страницы.</p><div class="challenge" id="tasks"><button onclick="toggle(this)">♻️ Отсортировал отходы</button><button onclick="toggle(this)">📦 Собрал бумагу/картон</button><button onclick="toggle(this)">🧴 Подготовил пластик</button><button onclick="toggle(this)">📍 Узнал адрес пункта</button><button onclick="toggle(this)">💬 Рассказал другу</button></div><p id="progress"><b>Выполнено: 0 из 5</b></p></section>
+<section class="section join-section" id="join">
+
+    <h2>
+    Присоединяйся!
+    <span class="eco-leaf">🍃 </span>
+</h2>
+    <p>Демо-форма: данные никуда не отправляются.</p>
+
+    <div class="join-content">
+
+        <!-- Левая сторона: анкета -->
+        <div class="join-form">
+            <form onsubmit="event.preventDefault();alert('Это демонстрационная форма. Заявка пока не отправляется.');">
+
+                <input required placeholder="Имя или ник">
+
+                <input type="email" placeholder="Email, номер телефона">
+
+                <select>
+                    <option>Как планируешь участвовать?</option>
+                    <option>Соберу вторсырьё</option>
+                    <option>Помогу на акции</option>
+                    <option>Распространю информацию</option>
+                    <option>Хочу узнать больше</option>
+                </select>
+
+                <button class="btn" type="submit">
+                    Присоединиться
+                </button>
+
+            </form>
+        </div>
+
+        <!-- Правая сторона: фотография -->
+        <div class="join-image">
+            <img src="муся.jpg" alt="Участие в экологической акции">
+        </div>
+
+    </div>
+
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const sections = document.querySelectorAll(
+        "section:not(.scroll-reveal)"
+    );
+
+    const observer = new IntersectionObserver(
+        function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0,
+            rootMargin: "0px 0px -40px 0px"
+        }
+    );
+
+    sections.forEach(function (section) {
+        section.classList.add("scroll-reveal");
+        observer.observe(section);
+    });
+
+});
+</script><script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cards = document.querySelectorAll(
+        ".step, .participation-card, .why-card, .material-card, .card"
+    );
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("stagger-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    cards.forEach(function (card) {
+        const siblings = Array.from(card.parentElement.children);
+        const index = siblings.indexOf(card);
+
+        card.classList.add("stagger-item");
+        card.style.setProperty(
+            "--stagger-delay",
+            Math.min(index * 120, 480) + "ms"
+        );
+
+        observer.observe(card);
+    });
+
+});
+</script><script>
+function updateScrollProgress() {
+    const scrollTop = window.scrollY;
+    const scrollHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+    const progress = scrollHeight > 0
+        ? (scrollTop / scrollHeight) * 100
+        : 0;
+
+    document.getElementById("scroll-progress")
+        .style.width = progress + "%";
+}
+
+window.addEventListener("scroll", updateScrollProgress);
+window.addEventListener("resize", updateScrollProgress);
+
+updateScrollProgress();
+</script><script>
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".eco-floating-leaves");
+
+    if (!container) return;
+
+    const leaves = ["🍃 ", "🌿 ", "🍂 "];
+
+    for (let i = 0; i < 15; i++) {
+        const leaf = document.createElement("span");
+
+        leaf.className = "floating-leaf";
+        leaf.textContent = leaves[Math.floor(Math.random() * leaves.length)];
+
+        leaf.style.left = Math.random() * 100 + "%";
+        leaf.style.animationDuration = (10 + Math.random() * 12) + "s";
+        leaf.style.animationDelay = (Math.random() * 18) + "s";
+        leaf.style.fontSize = (14 + Math.random() * 13) + "px";
+
+        container.appendChild(leaf);
+    }
+});
+</script><footer class="eco-footer">
+    <div class="footer-leaves">🌿  🍃  🌱 </div>
+
+    <h2>Экопоколение</h2>
+
+    <p class="footer-main">
+        Будущее планеты начинается с наших решений сегодня.
+    </p>
+
+    <p class="footer-small">
+        Сортируй. Сохраняй. Вдохновляй.
+    </p>
+
+    <div class="footer-line"></div>
+
+    <p class="footer-copy">
+        © 2026 Экопоколение · Вместе ради чистой планеты
+    </p>
+</footer><script>
+function toggle(button) {
+    button.classList.toggle("completed");
+
+    const tasks = document.querySelectorAll("#tasks button.completed");
+    const count = tasks.length;
+
+    document.getElementById("progress").innerHTML =
+        "<b>Выполнено: " + count + " из 5</b>";
+}
+</script></body><div class="eco-floating-leaves" aria-hidden="true"></div><div id="scroll-progress"></div></html>
