@@ -1274,14 +1274,17 @@ button:active {
     }
 
     /* 2. Карточки слегка пружинят при нажатии */
+   @media (max-width: 700px) {
     .step:active,
     .participation-card:active,
     .material-card:active,
-    .card:active {
-        transform: scale(0.97);
-        box-shadow: 0 5px 18px rgba(70, 120, 50, 0.2);
-        transition: 0.2s ease;
+    .card:active,
+    .why-card:active {
+        transform: scale(0.96) !important;
+        box-shadow: 0 6px 20px rgba(70, 120, 50, 0.25) !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+}
 
     /* 3. Анимация листочка в прогрессе */
     .progress-leaf {
