@@ -122,27 +122,33 @@
     color: #426b37;
     letter-spacing: 0.5px;
 }
-
 /* Адаптация для телефона */
-
 @media (max-width: 700px) {
     .eco-story-content {
-        flex-direction: column;
-        gap: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
     }
 
     .eco-story-image {
-        width: 100%;
+        width: 35%;
+        flex-shrink: 0;
     }
 
     .eco-story-image img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
         height: auto;
-        max-height: 280px;
-        object-fit: contain;
+        max-height: none;
+        object-fit: cover;
+        border-radius: 14px;
     }
 
     .eco-story-text {
-        font-size: 16px;
+        flex: 1;
+        min-width: 0;
+        font-size: 14px;
     }
 
     .eco-story-slogan {
