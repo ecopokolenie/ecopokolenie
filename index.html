@@ -1239,6 +1239,26 @@ button:active {
 }
 
 }
+/* Покачивание иконок на телефоне */
+@media (max-width: 700px) {
+
+    .emoji {
+        display: inline-block;
+        transform-origin: center bottom;
+        animation: eco-sway 3s ease-in-out infinite;
+    }
+
+    @keyframes eco-sway {
+        0%, 100% {
+            transform: rotate(-7deg);
+        }
+
+        50% {
+            transform: rotate(7deg);
+        }
+    }
+
+}
 </style></head><body>
 <header><div class="logo">♻ ЭКОПОКОЛЕНИЕ</div><nav><a href="#why">Зачем?</a><a href="#sort">Что сдавать</a><a href="#event">Акция</a><a href="#challenge">Челлендж</a></nav></header>
 <section class="hero"><div><span class="tag">Маленький шаг — большой вклад</span><h1>Сдай вторсырьё.<br>Помоги природе!</h1><p>Раздельный сбор — не сложно. Начни с того, что уже есть дома, и присоединяйся к экологическому движению.</p><a class="btn" href="#event">Присоединиться ↓</a></div><div class="art"><div class="hero-icons">
